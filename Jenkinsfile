@@ -1,9 +1,9 @@
 pipeline {
-    agent {label 'chef-server'}
+    agent {label 'ucp1'}
     stages {
         stage('Run') {
             steps {
-                sh '/home/oss/run-client.sh'
+                sh 'sudo chef-client'
             }
         }
     }
